@@ -5,7 +5,7 @@
 **Methods · Datasets · Benchmarks · Evaluation**
 
 <p>
-<a href="https://github.com/OmniAI-Lab-CUHKSZ/Awesome-GUI-Grounding/stargazers"><img src="https://img.shields.io/github/stars/OmniAI-Lab-CUHKSZ/Awesome-GUI-Grounding?style=flat-square&amp;logo=github&amp;color=F4B400" alt="GitHub stars"/></a>
+<a href="https://github.com/OmniAI-Lab-CUHKSZ/Awesome-GUI-Grounding/stargazers"><img src="https://img.shields.io/github/stars/OmniAI-Lab-CUHKSZ/Awesome-GUI-Grounding?style=social" alt="GitHub star count"/></a>
 <img src="https://img.shields.io/badge/Papers_and_Resources-214-7C3AED?style=flat-square" alt="214 papers and resources"/>
 <img src="https://img.shields.io/badge/Last_Update-November_2026-0EA5E9?style=flat-square" alt="Last update November 2026"/>
 <a href="references.bib"><img src="https://img.shields.io/badge/References-BibTeX-4B8278?style=flat-square" alt="Download BibTeX"/></a>
@@ -19,25 +19,9 @@
 <a href="#citation">Citation</a>
 </p>
 
-<sub>Continuously updated · Community contributions are welcome</sub>
+<sub>Continuously updated</sub>
 
 </div>
-
-<a id="citation"></a>
-
-## 📝 Citation
-
-```bibtex
-@misc{zu2026guigrounding,
-  title  = {GUI Grounding for Computer-Use Agents: A Survey},
-  author = {Lizheng Zu and Ke Huang and Gang Xu and Jingfan Fan and
-            Baoyuan Wu and Shengfeng He and Hehe Fan and Xiangyu Xu and
-            Chun Li and Yanshan Li and Shihui Ying and Junchi Yan and
-            Bingyi Jing and Ming Li and Zheng Zhu},
-  year   = {2026},
-  url    = {https://github.com/OmniAI-Lab-CUHKSZ/Awesome-GUI-Grounding}
-}
-```
 
 <a id="news"></a>
 
@@ -54,16 +38,18 @@
 Official repository for **GUI Grounding for Computer-Use Agents: A Survey**. A collection of methods, datasets, benchmarks, and related papers on mapping user intent to executable interface targets.
 
 <div align="center">
-<img src="assets/overview.png" width="95%" alt="GUI grounding maps an instruction and a screenshot to a target element and its location"/>
+<a href="assets/overview.png"><img src="assets/overview.png" width="95%" alt="GUI grounding maps an instruction and a screenshot to a target element and its location."/></a>
+<p><em>GUI grounding maps an instruction and a screenshot to a target element and its location.</em></p>
 </div>
 
 <a id="table-of-contents"></a>
 
 ## 🗂️ Table of Contents
 
-<details open>
+<details>
 <summary><b>Explore the collection</b></summary>
 
+- [Evolution of GUI Grounding](#evolution-of-gui-grounding)
 - [Learning Paradigms](#learning-paradigms)
   - [General Pretraining](#general-pretraining)
   - [GUI Grounding Pretraining](#gui-grounding-pretraining)
@@ -91,20 +77,28 @@ Official repository for **GUI Grounding for Computer-Use Agents: A Survey**. A c
   - [Efficient Grounding](#efficient-grounding)
 - [Foundations and Related GUI Agents](#foundations-and-related-gui-agents)
 - [Related Surveys](#related-surveys)
-- [Contributing](#contributing)
-- [Acknowledgements](#acknowledgements)
 - [Citation](#citation)
 
 </details>
 
 ---
 
+<a id="evolution-of-gui-grounding"></a>
+
+## 🗺️ Evolution of GUI Grounding
+
+<div align="center">
+<a href="assets/history-roadmap.png"><img src="assets/history-roadmap.png" width="100%" alt="Evolution of GUI grounding from foundations and interface modeling to screenshot grounding and grounding refinement"/></a>
+<p><em>From grounding foundations and interface modeling to screenshot grounding and grounding refinement.</em></p>
+</div>
+
 <a id="learning-paradigms"></a>
 
 ## 🧠 Learning Paradigms
 
 <div align="center">
-<img src="assets/taxonomy.svg" width="100%" alt="Three dimensions of GUI grounding: learning paradigms, inference strategies, and target representations"/>
+<a href="assets/method-framework.png"><img src="assets/method-framework.png" width="100%" alt="Three complementary dimensions: learning paradigms, inference strategies, and target representations."/></a>
+<p><em>Three complementary dimensions: learning paradigms, inference strategies, and target representations.</em></p>
 </div>
 
 <a id="general-pretraining"></a>
@@ -292,7 +286,8 @@ Official repository for **GUI Grounding for Computer-Use Agents: A Survey**. A c
 ## 🔍 Inference Strategies
 
 <div align="center">
-<img src="assets/inference-strategies.png" width="100%" alt="Direct, guided, multi-hypothesis, and iterative GUI grounding"/>
+<a href="assets/inference-strategies.png"><img src="assets/inference-strategies.png" width="100%" alt="Direct prediction, auxiliary guidance, multiple hypotheses, and iterative refinement."/></a>
+<p><em>Direct prediction, auxiliary guidance, multiple hypotheses, and iterative refinement.</em></p>
 </div>
 
 <a id="direct-grounding"></a>
@@ -443,7 +438,8 @@ Official repository for **GUI Grounding for Computer-Use Agents: A Survey**. A c
 ## 🎯 Target Representations
 
 <div align="center">
-<img src="assets/target-representations.png" width="100%" alt="Coordinate, spatial-response, and element representations"/>
+<a href="assets/target-representations.png"><img src="assets/target-representations.png" width="100%" alt="Grounding targets represented as coordinates, spatial responses, or interface elements."/></a>
+<p><em>Grounding targets represented as coordinates, spatial responses, or interface elements.</em></p>
 </div>
 
 <a id="coordinate-representations"></a>
@@ -523,7 +519,8 @@ Official repository for **GUI Grounding for Computer-Use Agents: A Survey**. A c
 ## 📊 Datasets and Evaluation
 
 <div align="center">
-<img src="assets/benchmarks.png" width="100%" alt="GUI grounding benchmarks covering text, icons, small targets, functionality, spatial relations, regions, and text dragging"/>
+<a href="assets/benchmarks.png"><img src="assets/benchmarks.png" width="100%" alt="Representative tasks: text and icon localization, small targets, functional and spatial references, regions, and text dragging."/></a>
+<p><em>Representative tasks: text and icon localization, small targets, functional and spatial references, regions, and text dragging.</em></p>
 </div>
 
 <a id="training-data-and-resources"></a>
@@ -709,18 +706,20 @@ M: mobile · D: desktop · W: web.
 - **`arXiv 2024`** Large Language Model-Brained GUI Agents: A Survey. [[paper](https://arxiv.org/abs/2411.18279)]
 - **`TMM 2020`** Referring Expression Comprehension: A Survey of Methods and Datasets. [[paper](https://arxiv.org/abs/2007.09554)]
 
-<a id="contributing"></a>
+---
 
-## 🤝 Contributing
+<a id="citation"></a>
 
-Contributions are welcome! Please open an issue or pull request with the paper title, venue/year, link, and relevant category.
+## 📝 Citation
 
-```markdown
-- **`Venue Year`** Paper title. [[paper](URL)] [[code](URL)]
+```bibtex
+@misc{zu2026guigrounding,
+  title  = {GUI Grounding for Computer-Use Agents: A Survey},
+  author = {Lizheng Zu and Ke Huang and Gang Xu and Jingfan Fan and
+            Baoyuan Wu and Shengfeng He and Hehe Fan and Xiangyu Xu and
+            Chun Li and Yanshan Li and Shihui Ying and Junchi Yan and
+            Bingyi Jing and Ming Li and Zheng Zhu},
+  year   = {2026},
+  url    = {https://github.com/OmniAI-Lab-CUHKSZ/Awesome-GUI-Grounding}
+}
 ```
-
-<a id="acknowledgements"></a>
-
-## Acknowledgements
-
-The repository layout is inspired by [Awesome-Long-Horizon-Agents](https://github.com/RUC-NLPIR/Awesome-Long-Horizon-Agents).
