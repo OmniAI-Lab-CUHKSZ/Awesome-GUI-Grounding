@@ -25,7 +25,7 @@
 
 ## 📰 News
 
-- **[2026/11]** update
+- **[2026/11]** We release **Awesome-GUI-Grounding**, a curated collection of papers, datasets, and benchmarks for GUI grounding.
 
 ---
 
