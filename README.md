@@ -19,15 +19,13 @@
 <a href="#citation">Citation</a>
 </p>
 
-<sub>Continuously updated</sub>
-
 </div>
 
 <a id="news"></a>
 
 ## 📰 News
 
-- **[2026/11]** Released the survey's collection of GUI grounding papers and resources.
+- **[2026/11]** update
 
 ---
 
@@ -35,11 +33,10 @@
 
 ## 📖 Introduction
 
-Official repository for **GUI Grounding for Computer-Use Agents: A Survey**. A collection of methods, datasets, benchmarks, and related papers on mapping user intent to executable interface targets.
+Official repository for **GUI Grounding for Computer-Use Agents: A Survey**. GUI grounding connects an agent’s task understanding to concrete interface actions: given a screenshot and an instruction, a model identifies the target element and predicts where to act. This collection covers the methods, datasets, and benchmarks behind that capability.
 
 <div align="center">
 <a href="assets/overview.png"><img src="assets/overview.png" width="95%" alt="GUI grounding maps an instruction and a screenshot to a target element and its location."/></a>
-<p><em>GUI grounding maps an instruction and a screenshot to a target element and its location.</em></p>
 </div>
 
 <a id="table-of-contents"></a>
@@ -50,6 +47,7 @@ Official repository for **GUI Grounding for Computer-Use Agents: A Survey**. A c
 <summary><b>Explore the collection</b></summary>
 
 - [Evolution of GUI Grounding](#evolution-of-gui-grounding)
+- [Method Taxonomy](#method-taxonomy)
 - [Learning Paradigms](#learning-paradigms)
   - [General Pretraining](#general-pretraining)
   - [GUI Grounding Pretraining](#gui-grounding-pretraining)
@@ -70,11 +68,6 @@ Official repository for **GUI Grounding for Computer-Use Agents: A Survey**. A c
   - [Training Data and Resources](#training-data-and-resources)
   - [Evaluation Benchmarks](#evaluation-benchmarks)
   - [GUI Agent Benchmarks and Environments](#gui-agent-benchmarks-and-environments)
-- [Challenges and Future Directions](#challenges-and-future-directions)
-  - [Semantic Grounding](#semantic-grounding)
-  - [Interactive Grounding](#interactive-grounding)
-  - [Reliable Grounding](#reliable-grounding)
-  - [Efficient Grounding](#efficient-grounding)
 - [Foundations and Related GUI Agents](#foundations-and-related-gui-agents)
 - [Related Surveys](#related-surveys)
 - [Citation](#citation)
@@ -87,19 +80,25 @@ Official repository for **GUI Grounding for Computer-Use Agents: A Survey**. A c
 
 ## 🗺️ Evolution of GUI Grounding
 
+GUI grounding has developed from visual grounding foundations and interface modeling to screenshot-based localization and grounding refinement. Recent work extends location prediction with visual search, iterative correction, and uncertainty-aware decisions, motivating the method taxonomy that follows.
+
 <div align="center">
 <a href="assets/history-roadmap.png"><img src="assets/history-roadmap.png" width="100%" alt="Evolution of GUI grounding from foundations and interface modeling to screenshot grounding and grounding refinement"/></a>
-<p><em>From grounding foundations and interface modeling to screenshot grounding and grounding refinement.</em></p>
+</div>
+
+<a id="method-taxonomy"></a>
+
+## 🧩 Method Taxonomy
+
+The survey organizes GUI grounding methods along three complementary dimensions: [learning paradigms](#learning-paradigms) describe how grounding capabilities are acquired, [inference strategies](#inference-strategies) describe how evidence is organized, and [target representations](#target-representations) describe how interaction targets are encoded. The paper lists below follow these dimensions.
+
+<div align="center">
+<a href="assets/method-framework.png"><img src="assets/method-framework.png" width="100%" alt="Three complementary dimensions: learning paradigms, inference strategies, and target representations."/></a>
 </div>
 
 <a id="learning-paradigms"></a>
 
 ## 🧠 Learning Paradigms
-
-<div align="center">
-<a href="assets/method-framework.png"><img src="assets/method-framework.png" width="100%" alt="Three complementary dimensions: learning paradigms, inference strategies, and target representations."/></a>
-<p><em>Three complementary dimensions: learning paradigms, inference strategies, and target representations.</em></p>
-</div>
 
 <a id="general-pretraining"></a>
 
@@ -287,7 +286,6 @@ Official repository for **GUI Grounding for Computer-Use Agents: A Survey**. A c
 
 <div align="center">
 <a href="assets/inference-strategies.png"><img src="assets/inference-strategies.png" width="100%" alt="Direct prediction, auxiliary guidance, multiple hypotheses, and iterative refinement."/></a>
-<p><em>Direct prediction, auxiliary guidance, multiple hypotheses, and iterative refinement.</em></p>
 </div>
 
 <a id="direct-grounding"></a>
@@ -439,7 +437,6 @@ Official repository for **GUI Grounding for Computer-Use Agents: A Survey**. A c
 
 <div align="center">
 <a href="assets/target-representations.png"><img src="assets/target-representations.png" width="100%" alt="Grounding targets represented as coordinates, spatial responses, or interface elements."/></a>
-<p><em>Grounding targets represented as coordinates, spatial responses, or interface elements.</em></p>
 </div>
 
 <a id="coordinate-representations"></a>
@@ -518,37 +515,9 @@ Official repository for **GUI Grounding for Computer-Use Agents: A Survey**. A c
 
 ## 📊 Datasets and Evaluation
 
-<div align="center">
-<a href="assets/benchmarks.png"><img src="assets/benchmarks.png" width="100%" alt="Representative tasks: text and icon localization, small targets, functional and spatial references, regions, and text dragging."/></a>
-<p><em>Representative tasks: text and icon localization, small targets, functional and spatial references, regions, and text dragging.</em></p>
-</div>
-
 <a id="training-data-and-resources"></a>
 
 ### Training Data and Resources
-
-M: mobile · D: desktop · W: web.
-
-| Resource | Year | Platforms | Scale | Links |
-|:---|:---:|:---:|:---|:---|
-| MobileViews | 2024 | M | >1.2M screens | [paper](https://arxiv.org/abs/2409.14337) |
-| SeeClick | 2024 | M/W | 1M samples | [paper](https://arxiv.org/abs/2401.10935) · [code](https://github.com/njucckevin/SeeClick) |
-| AutoGUI | 2024 | W | 702K samples | [paper](https://arxiv.org/abs/2502.01977) |
-| UGround | 2024 | M/W | 10M elements | [paper](https://arxiv.org/abs/2410.05243) · [code](https://github.com/OSU-NLP-Group/UGround) |
-| OS-ATLAS | 2024 | M/D/W | >13M elements | [paper](https://arxiv.org/abs/2410.23218) · [code](https://github.com/OS-Copilot/OS-Atlas) |
-| MultiUI | 2024 | W | 7.3M samples | [paper](https://arxiv.org/abs/2410.13824) |
-| AgentTrek | 2024 | W | 10.4K trajectories | [paper](https://arxiv.org/abs/2412.09605) |
-| ScaleCUA-Data | 2025 | M/D/W | >17.1M samples | [paper](https://arxiv.org/abs/2509.15221) · [code](https://github.com/OpenGVLab/ScaleCUA) |
-| GroundCUA | 2025 | D | >3.56M elements | [paper](https://arxiv.org/abs/2511.07332) |
-| GUI-Drag | 2025 | D/W | 161K samples | [paper](https://arxiv.org/abs/2601.06031) |
-| Jedi | 2025 | M/D/W | 4M examples | [paper](https://arxiv.org/abs/2505.13227) |
-| AUTO-Explorer | 2025 | D/W | 17.5K samples | [paper](https://arxiv.org/abs/2511.06417) |
-| GUI-360° | 2025 | D | 79.5K samples | [paper](https://arxiv.org/abs/2511.04307) |
-| ScreenParse | 2026 | W | 21.1M elements | [paper](https://arxiv.org/abs/2602.14276) |
-| CMGUI | 2026 | M | 18.9K samples | [paper](https://arxiv.org/abs/2603.08533) |
-| MolmoPoint-GUISyn | 2026 | M/D/W | >2M points | [paper](https://arxiv.org/abs/2603.28069) |
-| DragOn | 2026 | D/W | 3.5M tasks | [paper](https://arxiv.org/abs/2606.06322) |
-| DeskForge-1M | 2026 | D | 159.7M elements | [paper](https://arxiv.org/abs/2610.02320) |
 
 - **`arXiv 2026`** Beyond Clicking:A Step Towards Generalist GUI Grounding via Text Dragging. [[paper](https://arxiv.org/abs/2601.06031)]
 - **`arXiv 2026`** DeskForge: Dense Supervision from Desktop Environments for Computer-Use Agents. [[paper](https://arxiv.org/abs/2610.02320)]
@@ -579,57 +548,38 @@ M: mobile · D: desktop · W: web.
 
 ### Evaluation Benchmarks
 
-<a id="interface-coverage"></a>
+GUI grounding benchmarks span text and icon localization, small targets in dense interfaces, functional and spatial references, and precise interactions such as region selection and dragging. The examples below illustrate these task settings; the following papers also examine robustness and prediction reliability.
 
-#### Interface coverage
+<div align="center">
+<a href="assets/benchmarks.png"><img src="assets/benchmarks.png" width="100%" alt="Representative tasks: text and icon localization, small targets, functional and spatial references, regions, and text dragging."/></a>
+</div>
 
-| Benchmark | Year | Platforms | Size | Focus | Paper |
-|:---|:---:|:---:|---:|:---|:---:|
-| ScreenSpot | 2024 | M/D/W | 1,272 | Text and icons | [paper](https://arxiv.org/abs/2401.10935) |
-| ScreenSpot-v2 | 2024 | M/D/W | 1,272 | Text and icons | [paper](https://arxiv.org/abs/2410.23218) |
-| ScreenSpot-Pro | 2025 | D | 1,581 | High-resolution GUIs | [paper](https://doi.org/10.1145/3746027.3755688) |
-| WinSpot | 2025 | D | 5,000 | Windows apps | [paper](https://aclanthology.org/2025.acl-short.85/) |
-| GUI-360° | 2025 | D | 19,780 | Office applications | [paper](https://arxiv.org/abs/2511.04307) |
-| MedSPOT | 2026 | D/W | 597 | Clinical workflows | [paper](https://arxiv.org/abs/2603.19993) |
-
-<a id="instruction-design"></a>
-
-#### Instruction design
-
-| Benchmark | Year | Platforms | Size | Focus | Paper |
-|:---|:---:|:---:|---:|:---|:---:|
-| MUG | 2024 | M | 6,208 | Multi-turn instructions | [paper](https://arxiv.org/abs/2209.15099) |
-| UI-I2E-Bench | 2025 | M/D/W | 1,477 | Explicit/implicit instructions | [paper](https://arxiv.org/abs/2504.11257) |
-| UI-Vision | 2025 | D | 5,479 | Functional/spatial references | [paper](https://arxiv.org/abs/2503.15661) |
-| OSWorld-G | 2025 | D | 564 | Software knowledge | [paper](https://arxiv.org/abs/2505.13227) |
-| MMBench-GUI | 2025 | M/D/W | 3,574 | Goal-based instructions | [paper](https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_MMBench-GUI_A_Unified_Hierarchical_Evaluation_Framework_for_Multi-Platform_GUI_Agents_CVPR_2026_paper.pdf) |
-| CAGUI | 2025 | M | 3,000 | Chinese instructions | [paper](https://arxiv.org/abs/2506.01391) |
-| VenusBench-GD | 2025 | M/D/W | 6,166 | English/Chinese instructions | [paper](https://arxiv.org/abs/2512.16501) |
-| AutoGUI-v2 | 2026 | M/D/W | 1,518 | Functional regions/elements | [paper](https://arxiv.org/abs/2604.24441) |
-
-<a id="robustness"></a>
-
-#### Robustness
-
-| Benchmark | Year | Platforms | Size | Focus | Paper |
-|:---|:---:|:---:|---:|:---|:---:|
-| TransBench | 2025 | M/W | Variable | Cross-domain transfer | [paper](https://arxiv.org/abs/2505.17629) |
-| GUI-Perturbed | 2026 | W | 3,120 | Image/text perturbations | [paper](https://arxiv.org/abs/2604.14262) |
-| WinDeskGround | 2026 | D | Variable | Occlusion and distractors | [paper](https://arxiv.org/abs/2605.16402) |
-| GUI-HalluBench | 2026 | M/D/W | 2,000 | Confusable/absent targets | [paper](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_Exposing_and_Evaluating_Hallucinations_for_GUI_Grounding_CVPR_2026_paper.pdf) |
-| GUI-Primitives | 2026 | D/W | 994 | Paired spatial instructions | [paper](https://arxiv.org/abs/2608.21832) |
-| ScreenHaystack | 2026 | D | 48,000 | Spatial blind zones | [paper](https://arxiv.org/abs/2609.32036) |
-
-<a id="region-and-interaction-grounding"></a>
-
-#### Region and interaction grounding
-
-| Benchmark | Year | Platforms | Size | Focus | Paper |
-|:---|:---:|:---:|---:|:---|:---:|
-| UI-Vision | 2025 | D | 311 | Functional regions | [paper](https://arxiv.org/abs/2503.15661) |
-| ScreenDrag | 2025 | D | 5,333 | Text selection | [paper](https://arxiv.org/abs/2601.06031) |
-| DragOn | 2026 | D/W | 2,000 | Diverse drag actions | [paper](https://arxiv.org/abs/2606.06322) |
-| FineState-Bench | 2026 | M/D/W | 2,209 | State-conditioned grounding | [paper](https://arxiv.org/abs/2604.27974) |
+- **`arXiv 2026`** AutoGUI-v2: A Comprehensive Multi-Modal GUI Functionality Understanding Benchmark. [[paper](https://arxiv.org/abs/2604.24441)]
+- **`arXiv 2026`** Beyond Clicking:A Step Towards Generalist GUI Grounding via Text Dragging. [[paper](https://arxiv.org/abs/2601.06031)]
+- **`EACL Findings 2026`** Do GUI Grounders Truly Understand UI Elements? [[paper](https://aclanthology.org/2026.findings-eacl.144/)]
+- **`arXiv 2026`** DragOn: A Benchmark and Dataset for Drag-Based GUI Interactions. [[paper](https://arxiv.org/abs/2606.06322)]
+- **`CVPR 2026`** Exposing and Evaluating Hallucinations for GUI Grounding. [[paper](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_Exposing_and_Evaluating_Hallucinations_for_GUI_Grounding_CVPR_2026_paper.pdf)]
+- **`ACL Findings 2026`** FineState-Bench: Benchmarking State-Conditioned Grounding for Fine-grained GUI State Setting. [[paper](https://arxiv.org/abs/2604.27974)] [[code](https://github.com/FengxianJi/FineState-Bench)]
+- **`arXiv 2026`** GUI-Perturbed: Domain Randomization Reveals Systematic Brittleness in GUI Grounding Models. [[paper](https://arxiv.org/abs/2604.14262)]
+- **`arXiv 2026`** GUI-Primitives: Diagnosing Spatial Reasoning Failures in Vision-Language GUI Grounding. [[paper](https://arxiv.org/abs/2608.21832)]
+- **`ECCV 2026`** MedSPOT: A Workflow-Aware Sequential Grounding Benchmark for Clinical GUI. [[paper](https://arxiv.org/abs/2603.19993)] [[code](https://github.com/Tajamul21/MedSPOT)]
+- **`CVPR 2026`** MMBench-GUI: A Unified Hierarchical Evaluation Framework for Multi-Platform GUI Agents. [[paper](https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_MMBench-GUI_A_Unified_Hierarchical_Evaluation_Framework_for_Multi-Platform_GUI_Agents_CVPR_2026_paper.pdf)]
+- **`arXiv 2026`** SafeGround: Know When to Trust GUI Grounding Models via Uncertainty Calibration. [[paper](https://arxiv.org/abs/2602.02419)]
+- **`arXiv 2026`** ScreenHaystack: Finding Blind Zones in GUI Grounding. [[paper](https://arxiv.org/abs/2609.32036)]
+- **`arXiv 2026`** Uncertainty Quantification for Computer-Use Agents: A Benchmark across Vision-Language Models and GUI Grounding Datasets. [[paper](https://arxiv.org/abs/2606.25760)]
+- **`arXiv 2026`** WinDeskGround: A Benchmark for Robust GUI Grounding in Complex Multi-Window Desktop Environments. [[paper](https://arxiv.org/abs/2605.16402)]
+- **`EMNLP Demo 2025`** AgentCPM-GUI: Building Mobile-Use Agents with Reinforcement Fine-Tuning. [[paper](https://arxiv.org/abs/2506.01391)]
+- **`arXiv 2025`** GUI-360°: A Comprehensive Dataset and Benchmark for Computer-Using Agents. [[paper](https://arxiv.org/abs/2511.04307)]
+- **`ICLR 2025`** OS-ATLAS: A Foundation Action Model for Generalist GUI Agents. [[paper](https://arxiv.org/abs/2410.23218)] [[code](https://github.com/OS-Copilot/OS-Atlas)]
+- **`NeurIPS 2025`** Scaling Computer-Use Grounding via User Interface Decomposition and Synthesis. [[paper](https://arxiv.org/abs/2505.13227)]
+- **`ACM MM 2025`** ScreenSpot-Pro: GUI grounding for professional high-resolution computer use. [[paper](https://doi.org/10.1145/3746027.3755688)] [[code](https://github.com/likaixin2000/ScreenSpot-Pro-GUI-Grounding)]
+- **`ACL Findings 2025`** TransBench: Breaking Barriers for Transferable Graphical User Interface Agents in Dynamic Digital Environments. [[paper](https://arxiv.org/abs/2505.17629)]
+- **`ACL Findings 2025`** UI-E2I-Synth: Advancing GUI Grounding with Large-Scale Instruction Synthesis. [[paper](https://arxiv.org/abs/2504.11257)]
+- **`arXiv 2025`** UI-Vision: A Desktop-centric GUI Benchmark for Visual Perception and Interaction. [[paper](https://arxiv.org/abs/2503.15661)]
+- **`arXiv 2025`** VenusBench-GD: A Comprehensive Multi-Platform GUI Benchmark for Diverse Grounding Tasks. [[paper](https://arxiv.org/abs/2512.16501)]
+- **`ACL 2025`** WinSpot: GUI Grounding Benchmark with Multimodal Large Language Models. [[paper](https://aclanthology.org/2025.acl-short.85/)]
+- **`EACL Findings 2024`** MUG: Interactive Multimodal Grounding on User Interfaces. [[paper](https://arxiv.org/abs/2209.15099)]
+- **`ACL 2024`** SeeClick: Harnessing GUI Grounding for Advanced Visual GUI Agents. [[paper](https://arxiv.org/abs/2401.10935)] [[code](https://github.com/njucckevin/SeeClick)]
 
 <a id="gui-agent-benchmarks-and-environments"></a>
 
@@ -641,44 +591,6 @@ M: mobile · D: desktop · W: web.
 - **`ICLR 2024`** WebArena: A Realistic Web Environment for Building Autonomous Agents. [[paper](https://arxiv.org/abs/2307.13854)] [[code](https://github.com/web-arena-x/webarena)]
 - **`NeurIPS 2023`** AndroidInTheWild: A Large-Scale Dataset For Android Device Control. [[paper](https://proceedings.neurips.cc/paper_files/paper/2023/hash/bbbb6308b402fe909c39dd29950c32e0-Abstract.html)]
 - **`NeurIPS 2023`** Mind2Web: Towards a Generalist Agent for the Web. [[paper](https://arxiv.org/abs/2306.06070)] [[code](https://github.com/OSU-NLP-Group/Mind2Web)]
-
-<a id="challenges-and-future-directions"></a>
-
-## 🧭 Challenges and Future Directions
-
-<a id="semantic-grounding"></a>
-
-### Semantic Grounding
-
-- **`arXiv 2026`** GUI-Primitives: Diagnosing Spatial Reasoning Failures in Vision-Language GUI Grounding. [[paper](https://arxiv.org/abs/2608.21832)]
-- **`ACL Findings 2025`** UI-E2I-Synth: Advancing GUI Grounding with Large-Scale Instruction Synthesis. [[paper](https://arxiv.org/abs/2504.11257)]
-
-<a id="interactive-grounding"></a>
-
-### Interactive Grounding
-
-- **`ACL Findings 2025`** Aria-UI: Visual Grounding for GUI Instructions. [[paper](https://arxiv.org/abs/2412.16256)]
-- **`EMNLP 2025`** UI-Hawk: Unleashing the Screen Stream Understanding for Mobile GUI Agents. [[paper](https://aclanthology.org/2025.emnlp-main.920/)]
-
-<a id="reliable-grounding"></a>
-
-### Reliable Grounding
-
-- **`EACL Findings 2026`** Do GUI Grounders Truly Understand UI Elements? [[paper](https://aclanthology.org/2026.findings-eacl.144/)]
-- **`CVPR 2026`** Exposing and Evaluating Hallucinations for GUI Grounding. [[paper](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_Exposing_and_Evaluating_Hallucinations_for_GUI_Grounding_CVPR_2026_paper.pdf)]
-- **`arXiv 2026`** LookAgain: Closed-Loop GUI Grounding with Visually Grounded Reflection. [[paper](https://arxiv.org/abs/2608.09723)]
-- **`arXiv 2026`** SafeGround: Know When to Trust GUI Grounding Models via Uncertainty Calibration. [[paper](https://arxiv.org/abs/2602.02419)]
-- **`arXiv 2026`** Uncertainty Quantification for Computer-Use Agents: A Benchmark across Vision-Language Models and GUI Grounding Datasets. [[paper](https://arxiv.org/abs/2606.25760)]
-- **`NeurIPS 2025`** Scaling Computer-Use Grounding via User Interface Decomposition and Synthesis. [[paper](https://arxiv.org/abs/2505.13227)]
-
-<a id="efficient-grounding"></a>
-
-### Efficient Grounding
-
-- **`arXiv 2026`** AQuaUI: Visual Token Reduction for GUI Agents with Adaptive Quadtrees. [[paper](https://arxiv.org/abs/2605.19260)]
-- **`arXiv 2026`** AutoFocus: Uncertainty-Aware Active Visual Search for GUI Grounding. [[paper](https://arxiv.org/abs/2605.02630)]
-- **`CVPR 2026`** MVP: Multiple View Prediction Improves GUI Grounding. [[paper](https://arxiv.org/abs/2512.08529)] [[code](https://github.com/ZJUSCL/MVP)]
-- **`ACM MM 2025`** ScreenSpot-Pro: GUI grounding for professional high-resolution computer use. [[paper](https://doi.org/10.1145/3746027.3755688)] [[code](https://github.com/likaixin2000/ScreenSpot-Pro-GUI-Grounding)]
 
 <a id="foundations-and-related-gui-agents"></a>
 
