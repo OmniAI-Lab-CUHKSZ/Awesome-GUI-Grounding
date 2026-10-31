@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="768" height="289.28" viewBox="0 0 1200 452" role="img" aria-labelledby="title desc">
+<title id="title">GUI Grounding Taxonomy</title>
+<desc id="desc">Three complementary dimensions: learning paradigms, inference strategies, and target representations.</desc>
+<rect width="1200" height="452" rx="20" fill="#f7f9fc"/>
+<g font-family="Arial, Helvetica, sans-serif" fill="#243244">
+<text x="40" y="48" font-size="27" font-weight="700">GUI Grounding Taxonomy</text>
+<text x="40" y="77" font-size="15" fill="#5d6b7b">Three complementary dimensions of methods for computer-use agents</text>
+<rect x="32" y="102" width="368" height="320" rx="14" fill="#fff" stroke="#cbd8e7"/>
+<rect x="416" y="102" width="368" height="320" rx="14" fill="#fff" stroke="#e4d5c6"/>
+<rect x="800" y="102" width="368" height="320" rx="14" fill="#fff" stroke="#c5dcd6"/>
+<path d="M46 102H386Q400 102 400 116V164H32V116Q32 102 46 102" fill="#eaf0f8"/>
+<path d="M430 102H770Q784 102 784 116V164H416V116Q416 102 430 102" fill="#f8f0e7"/>
+<path d="M814 102H1154Q1168 102 1168 116V164H800V116Q800 102 814 102" fill="#e9f3ef"/>
+<g font-size="21" font-weight="700">
+<text x="54" y="141" fill="#4c6a92">Learning Paradigms</text>
+<text x="438" y="141" fill="#9c6a3b">Inference Strategies</text>
+<text x="822" y="141" fill="#376d62">Target Representations</text>
+</g>
+<g font-size="18" font-weight="600">
+<text x="56" y="199">Pretraining</text>
+<text x="56" y="267">Fine-Tuning</text>
+<text x="56" y="378">Training-Free</text>
+<text x="440" y="207">Direct Grounding</text>
+<text x="440" y="263">Guided Grounding</text>
+<text x="440" y="319">Multi-Hypothesis Grounding</text>
+<text x="440" y="375">Iterative Grounding</text>
+<text x="824" y="207">Coordinate Representations</text>
+<text x="824" y="287">Spatial-Response Representations</text>
+<text x="824" y="367">Element Representations</text>
+</g>
+<g font-size="15" fill="#5d6b7b">
+<text x="72" y="224">General · GUI-specific</text>
+<text x="72" y="294">Supervised fine-tuning</text>
+<text x="72" y="318">Reinforcement learning</text>
+<text x="72" y="342">On-policy distillation</text>
+<text x="824" y="233">Points · Boxes · Trajectories</text>
+<text x="824" y="313">Pixels · Visual tokens · Regions</text>
+<text x="824" y="393">Candidate elements and geometry</text>
+</g>
+</g>
+</svg>
