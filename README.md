@@ -1,5 +1,9 @@
 <div align="center">
 
+<p>
+<a href="assets/overview.png"><img src="assets/overview.png" width="100%" alt="GUI grounding maps an instruction and a screenshot to a target element and its location."/></a>
+</p>
+
 # GUI Grounding for Computer-Use Agents: A Survey
 
 **Methods · Datasets · Benchmarks · Evaluation**
@@ -35,8 +39,10 @@
 
 Official repository for **GUI Grounding for Computer-Use Agents: A Survey**. GUI grounding connects an agent’s task understanding to concrete interface actions: given a screenshot and an instruction, a model identifies the target element and predicts where to act. This collection covers the methods, datasets, and benchmarks behind that capability.
 
+GUI grounding has evolved from visual grounding and interface modeling toward screenshot-based localization, visual search, and iterative refinement. The roadmap below traces these developments.
+
 <div align="center">
-<a href="assets/overview.png"><img src="assets/overview.png" width="95%" alt="GUI grounding maps an instruction and a screenshot to a target element and its location."/></a>
+<a href="assets/history-roadmap.png"><img src="assets/history-roadmap.png" width="100%" alt="Evolution of GUI grounding from foundations and interface modeling to screenshot grounding and grounding refinement"/></a>
 </div>
 
 <a id="table-of-contents"></a>
@@ -46,7 +52,6 @@ Official repository for **GUI Grounding for Computer-Use Agents: A Survey**. GUI
 <details>
 <summary><b>Explore the collection</b></summary>
 
-- [Evolution of GUI Grounding](#evolution-of-gui-grounding)
 - [Method Taxonomy](#method-taxonomy)
 - [Learning Paradigms](#learning-paradigms)
   - [General Pretraining](#general-pretraining)
@@ -75,16 +80,6 @@ Official repository for **GUI Grounding for Computer-Use Agents: A Survey**. GUI
 </details>
 
 ---
-
-<a id="evolution-of-gui-grounding"></a>
-
-## 🗺️ Evolution of GUI Grounding
-
-GUI grounding has developed from visual grounding foundations and interface modeling to screenshot-based localization and grounding refinement. Recent work extends location prediction with visual search, iterative correction, and uncertainty-aware decisions, motivating the method taxonomy that follows.
-
-<div align="center">
-<a href="assets/history-roadmap.png"><img src="assets/history-roadmap.png" width="100%" alt="Evolution of GUI grounding from foundations and interface modeling to screenshot grounding and grounding refinement"/></a>
-</div>
 
 <a id="method-taxonomy"></a>
 
