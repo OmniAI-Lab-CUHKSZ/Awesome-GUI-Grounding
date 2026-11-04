@@ -10,6 +10,7 @@
 
 <p>
 <a href="https://github.com/OmniAI-Lab-CUHKSZ/Awesome-GUI-Grounding/stargazers"><img src="https://img.shields.io/github/stars/OmniAI-Lab-CUHKSZ/Awesome-GUI-Grounding?style=social" alt="GitHub star count"/></a>
+<a href="Preprints_Manuscript.pdf"><img src="https://img.shields.io/badge/Paper-PDF-B31B1B?style=flat-square" alt="Read the paper online"/></a>
 <img src="https://img.shields.io/badge/Papers_and_Resources-292-7C3AED?style=flat-square" alt="292 papers and resources"/>
 <img src="https://img.shields.io/badge/Last_Update-November_2026-0EA5E9?style=flat-square" alt="Last update November 2026"/>
 <a href="references.bib"><img src="https://img.shields.io/badge/References-BibTeX-4B8278?style=flat-square" alt="Download BibTeX"/></a>
@@ -37,7 +38,7 @@
 
 ## 📖 Introduction
 
-Official repository for **GUI Grounding for Computer-Use Agents: A Survey**. GUI grounding connects an agent’s task understanding to concrete interface actions: given a screenshot and an instruction, a model identifies the target element and predicts where to act. This collection covers the methods, datasets, and benchmarks behind that capability.
+Official repository for **[GUI Grounding for Computer-Use Agents: A Survey](https://doi.org/10.20944/preprints202611.0431.v1)**. GUI grounding connects an agent’s task understanding to concrete interface actions: given a screenshot and an instruction, a model identifies the target element and predicts where to act. This collection covers the methods, datasets, and benchmarks behind that capability.
 
 GUI grounding has evolved from visual grounding and interface modeling toward screenshot-based localization, visual search, and iterative refinement. The roadmap below traces these developments.
 
@@ -991,13 +992,14 @@ GUI grounding benchmarks span text and icon localization, small targets in dense
 ## 📝 Citation
 
 ```bibtex
-@misc{zu2026guigrounding,
-  title  = {GUI Grounding for Computer-Use Agents: A Survey},
-  author = {Lizheng Zu and Ke Huang and Gang Xu and Jingfan Fan and
-            Baoyuan Wu and Shengfeng He and Hehe Fan and Xiangyu Xu and
-            Chun Li and Yanshan Li and Shihui Ying and Junchi Yan and
-            Bingyi Jing and Ming Li and Zheng Zhu},
-  year   = {2026},
-  url    = {https://github.com/OmniAI-Lab-CUHKSZ/Awesome-GUI-Grounding}
+@article{202611.0431,
+  doi = {10.20944/preprints202611.0431.v1},
+  url = {https://doi.org/10.20944/preprints202611.0431.v1},
+  year = 2026,
+  month = {November},
+  publisher = {Preprints},
+  author = {Lizheng Zu and Ke Huang and Gang Xu and Jingfan Fan and Baoyuan Wu and Shengfeng He and Hehe Fan and Xiangyu Xu and Chun Li and Yanshan Li and Shihui Ying and Junchi Yan and Bingyi Jing and Ming Li and Zheng Zhu},
+  title = {GUI Grounding for Computer-Use Agents: A Survey},
+  journal = {Preprints}
 }
 ```
