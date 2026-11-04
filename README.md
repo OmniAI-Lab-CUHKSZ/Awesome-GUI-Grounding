@@ -9,8 +9,8 @@
 **Methods · Datasets · Benchmarks · Evaluation**
 
 <p>
-<a href="https://github.com/OmniAI-Lab-CUHKSZ/Awesome-GUI-Grounding/stargazers"><img src="https://img.shields.io/github/stars/OmniAI-Lab-CUHKSZ/Awesome-GUI-Grounding?style=social" alt="GitHub star count"/></a>
-<a href="Preprints_Manuscript.pdf"><img src="https://img.shields.io/badge/Paper-PDF-B31B1B?style=flat-square" alt="Read the paper online"/></a>
+<a href="https://lz-zu.github.io/gui-grounding/"><img src="https://img.shields.io/badge/Project-Page-2F5FE0?style=flat-square" alt="Visit the project page"/></a>
+<a href="https://lz-zu.github.io/gui-grounding/paper.html"><img src="https://img.shields.io/badge/Paper-Read_Online-B31B1B?style=flat-square" alt="Read the paper online"/></a>
 <img src="https://img.shields.io/badge/Papers_and_Resources-292-7C3AED?style=flat-square" alt="292 papers and resources"/>
 <img src="https://img.shields.io/badge/Last_Update-November_2026-0EA5E9?style=flat-square" alt="Last update November 2026"/>
 <a href="references.bib"><img src="https://img.shields.io/badge/References-BibTeX-4B8278?style=flat-square" alt="Download BibTeX"/></a>
